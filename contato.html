@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Geely Store</title>
+    <meta name="description" content="Fale com a Geely Store sobre acessórios para o seu Geely EX2.">
+    <meta name="theme-color" content="#0f0f1e">
+    <meta property="og:title" content="Geely Store">
+    <meta property="og:description" content="Acessórios selecionados para o seu Geely EX2.">
+    <meta property="og:image" content="img/geely1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="page">
+    <header class="site-header">
+        <a class="logo" href="index.html">Geely Store</a>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html" aria-current="page">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="page-intro">
+            <p class="product-tag">Fale com a gente</p>
+            <h1>Contato</h1>
+            <p class="description">Gostou de algum acessório? Mande uma mensagem e responderemos o quanto antes.</p>
+        </section>
+
+        <section class="contact">
+            <form class="contact-form" id="contact-form">
+                <label>Nome
+                    <input type="text" name="nome" autocomplete="name" required>
+                </label>
+                <label>E-mail
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <label>Telefone / WhatsApp
+                    <input type="tel" name="telefone" autocomplete="tel" placeholder="(00) 00000-0000">
+                </label>
+                <label>Produto de interesse
+                    <select name="produto" id="produto">
+                        <option value="">Nenhum em especial</option>
+                        <option value="1">Tapetes de Borracha Premium Geely EX2 2025 a 2026</option>
+                        <option value="2">Capa de Chave Geely EX2 Max e Pro</option>
+                        <option value="3">Chaveiro Geely EC7, EX2 e EX5 Luxo</option>
+                        <option value="4">Capa de Chave Geome Geely EX2</option>
+                        <option value="5">Capa de Chave Geely EX2 em Couro Rosa</option>
+                        <option value="6">Película PPF Transparente Geely EX2</option>
+                    </select>
+                </label>
+                <label class="full">Mensagem
+                    <textarea name="mensagem" rows="5" required></textarea>
+                </label>
+                <button class="btn" type="submit">Enviar mensagem</button>
+                <p class="form-status" role="status" hidden>Obrigado! Esta é uma página de demonstração, então a mensagem não foi enviada de verdade.</p>
+            </form>
+
+            <aside class="contact-info">
+                <h2>Como comprar</h2>
+                <ul>
+                    <li><strong>1.</strong> Escolha o acessório na página de produtos.</li>
+                    <li><strong>2.</strong> Envie o formulário com o produto de interesse.</li>
+                    <li><strong>3.</strong> Combinamos pagamento e entrega com você.</li>
+                </ul>
+                <h2>Atendimento</h2>
+                <ul>
+                    <li><strong>Horário:</strong> segunda a sexta, das 9h às 18h</li>
+                </ul>
+                <a class="btn btn-outline" href="produtos.html">Ver produtos</a>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Gostou de algum acessório? <a href="contato.html">Fale com a gente!</a></p>
+        <p>Desenvolvido por <strong>Elson Rocha</strong> ·
+            <a href="https://github.com/elsondev-backend" target="_blank" rel="noopener">GitHub</a></p>
+    </footer>
+</body>
+
+</html>
