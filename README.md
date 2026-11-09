@@ -35,6 +35,7 @@ Os slides trocam sozinhos a cada **5 segundos**, e o visitante também pode nave
 - Troca automática de slide a cada 5 segundos, voltando ao início depois do último.
 - Navegação pelas setas, pelos indicadores (clicáveis), pelas setas do teclado e deslizando o dedo no celular.
 - Botão **Saiba Mais** que abre e fecha a descrição completa do produto (o carrossel pausa enquanto ela está aberta).
+- Página **Home** sobre a fabricante: fundação em 1986, compra da Volvo, marcas do grupo, o EX2 e a chegada ao Brasil.
 - Página **Produtos** com todos os acessórios em cartões, cada um com "Saiba Mais" e botão **Tenho interesse**.
 - Página **Contato** com formulário; o botão "Tenho interesse" já chega com o produto escolhido (o envio é só demonstração).
 - Contador numérico e barra de indicadores sincronizados com o slide atual.
@@ -56,7 +57,8 @@ Os slides trocam sozinhos a cada **5 segundos**, e o visitante também pode nave
 
 ```
 DevStore/
-├── index.html    # Início: carrossel com os 6 produtos em destaque
+├── index.html    # Vitrine: carrossel com os 6 produtos em destaque
+├── home.html     # Home: carrossel sobre a fabricante Geely (história, Volvo, marcas, EX2, Brasil)
 ├── produtos.html # Catálogo com todos os produtos em cartões
 ├── contato.html  # Formulário de contato (demonstração)
 ├── style.css     # Estilos, cores, animações e layout

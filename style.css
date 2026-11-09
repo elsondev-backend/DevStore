@@ -689,3 +689,101 @@ a.btn {
 .contact-form select {
     width: 100%;
 }
+
+/* ---------- Página Home (sobre a Geely) ---------- */
+
+.visual {
+    width: min(100%, 360px);
+    aspect-ratio: 1;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 247, 255, 0.35);
+    background:
+        radial-gradient(circle at 30% 25%, rgba(0, 247, 255, 0.25), transparent 60%),
+        linear-gradient(135deg, #12122a, #0a1a2e);
+    box-shadow: 0 0 40px rgba(0, 247, 255, 0.15), inset 0 0 40px rgba(0, 247, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: transform 0.7s ease-in-out 0.3s, opacity 0.7s ease-in-out 0.3s;
+}
+
+.item.active .visual {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.visual-big {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    color: var(--neon);
+    text-shadow: 0 0 25px rgba(0, 247, 255, 0.6);
+    line-height: 1;
+}
+
+.visual-small {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+.visual-marcas {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 10px;
+    padding: 24px;
+}
+
+.visual-marcas span {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border: 1px solid rgba(0, 247, 255, 0.4);
+    border-radius: 30px;
+    color: var(--texto);
+    background: rgba(0, 247, 255, 0.06);
+}
+
+.product-img .car-photo {
+    width: min(100%, 520px);
+    aspect-ratio: auto;
+    object-fit: contain;
+    border-radius: 0;
+    filter: drop-shadow(0 20px 30px rgba(0, 247, 255, 0.25));
+}
+
+.fontes {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 860px) {
+    .visual {
+        width: min(55vw, 30vh, 260px);
+    }
+
+    .visual-big {
+        font-size: clamp(2.4rem, 12vw, 3.6rem);
+    }
+
+    .visual-marcas {
+        gap: 6px;
+        padding: 12px;
+    }
+
+    .visual-marcas span {
+        font-size: 0.7rem;
+        padding: 5px 9px;
+    }
+
+    .product-img .car-photo {
+        width: min(85vw, 420px);
+    }
+}
