@@ -1,22 +1,23 @@
-// Carrossel da Geely Store
-const items = document.querySelectorAll(".item");
-const dots = document.querySelectorAll(".dot");
-const numberIndicator = document.querySelector(".numbers");
-const prevBTN = document.getElementById("prev");
-const nextBTN = document.getElementById("next");
+// Carrossel da Geely Store (só existe na página inicial)
+if (document.querySelector(".container")) {
+    const items = document.querySelectorAll(".item");
+    const dots = document.querySelectorAll(".dot");
+    const numberIndicator = document.querySelector(".numbers");
+    const prevBTN = document.getElementById("prev");
+    const nextBTN = document.getElementById("next");
 
-const total = items.length;
-const INTERVALO = 5000; // troca de slide a cada 5 segundos
-let active = 0;
-let timer;
+    const total = items.length;
+    const INTERVALO = 5000; // troca de slide a cada 5 segundos
+    let active = 0;
+    let timer;
 
-// Fecha o "Saiba Mais" de um slide
-function fecharSaiba(item) {
-    const botao = item.querySelector(".btn");
-    const texto = item.querySelector(".saiba");
-    botao.setAttribute("aria-expanded", "false");
-    botao.textContent = "Saiba Mais";
-    texto.hidden = true;
+    // Fecha o "Saiba Mais" de um slide
+    function fecharSaiba(item) {
+        const botao = item.querySelector(".btn");
+        const texto = item.querySelector(".saiba");
+        botao.setAttribute("aria-expanded", "false");
+        botao.textContent = "Saiba Mais";
+        texto.hidden = true;
 }
 
 // Mostra o slide de número "novo"
@@ -87,3 +88,19 @@ area.addEventListener("touchend", (e) => {
 });
 
 iniciarTimer();
+}
+
+// Página de contato: formulário de demonstração (sem envio real)
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+    // Vindo de "Tenho interesse" (contato.html?produto=3), já seleciona o produto
+    const produto = new URLSearchParams(location.search).get("produto");
+    if (produto) contactForm.querySelector("#produto").value = produto;
+
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        contactForm.querySelector(".form-status").hidden = false;
+        contactForm.reset();
+    });
+}
